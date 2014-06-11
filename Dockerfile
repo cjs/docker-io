@@ -25,8 +25,8 @@ RUN apt-get install -y libogg-dev uuid-dev
 RUN mkdir /tmp/iobuild
 WORKDIR /tmp/iobuild
 
-RUN wget --no-check-certificate https://github.com/stevedekorte/io/archive/2013.12.04.zip -O io-lang.zip
-RUN unzip io-lang.zip
+RUN wget --no-verbose --no-check-certificate https://github.com/stevedekorte/io/archive/2013.12.04.zip -O io-lang.zip
+RUN unzip -qo io-lang.zip
 
 WORKDIR /tmp/iobuild/io-2013.12.04
 
