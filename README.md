@@ -1,9 +1,13 @@
 docker-io
 =========
 
-Dockerfile for an image providing access to the [IO Language](http://iolanguage.org/), based on Debian Stable. The build artifacts are still in the /tmp directory. 
+Dockerfile for an image providing access to the [IO Language](http://iolanguage.org/), based on Debian Stable. The build artifacts are still in the /tmp directory, and the procedure from build.sh is followed. 
+
+Most libraries required by the addons are included in the image, which accounts for the size.
 
 This fails 3 tests, but I'm not familiar enough with IO to understand why.
+
+Currently there is only support for the latest 2013.12.04 release. Will update the master branch once I figure out how to change the WORKDIR to the directory created by the master branch checkout (there's a hash at the end).
 
 ~~~
 root@97111b64e45f:/tmp/iobuild/io-2013.12.04/build# io ../libs/iovm/tests/correctness/run.io
